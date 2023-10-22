@@ -1,0 +1,25 @@
+import random
+
+print('ЧЕГО СКАЗАТЬ-ТО ХОТЕЛ, МИЛОК?!')
+flag=True
+count=0
+def dialog():
+    global flag
+    global count
+    quest=input('')
+    date=random.randint(30,50)
+    if quest=="ПОКА!":
+        count+=1
+        print('НЕТ, НИ РАЗУ С 19{}'.format(date))
+        if count==3:
+            print("ДО СВИДАНИЯ, МИЛЫЙ!")
+            flag=False
+    elif quest.isupper()==True:
+        print('НЕТ, НИ РАЗУ С 19{}'.format(date))
+
+    else:
+        print('АСЬ?! ГОВОРИ ГРОМЧЕ, ВНУЧЕК!,')
+
+    
+while flag==True:
+    dialog()
